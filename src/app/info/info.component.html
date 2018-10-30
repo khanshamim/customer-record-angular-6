@@ -1,0 +1,29 @@
+<div class="info" *ngIf="customerSlug != '' ">
+    <h1 class="text-center">Customer Record</h1>
+    <br />
+    <table class="table table-bordered secondary-table">
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+        <th>Company</th>
+        <th>Gender</th>
+        <th>Customer ID</th>
+        <th>Country</th>
+        <th>State</th>
+      </tr>
+      <tr *ngIf="selectedCustomer.length > 0">
+        <td>{{selectedCustomer[0]}}</td>
+        <td>{{selectedCustomer[1]}}</td>
+        <td>{{selectedCustomer[2]}}</td>
+        <td>{{selectedCustomer[3]}}</td>
+        <td>{{selectedCustomer[4]}}</td>
+        <td>{{selectedCustomer[5]}}</td>
+        <td>{{selectedCustomer[6]}}</td>
+        <td>{{selectedCustomer[7]}}</td>
+      </tr>
+    </table>
+    <br />
+    <br/><br/>
+  </div>
+  

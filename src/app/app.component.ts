@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
+import { Component  } from '@angular/core';
 
 @Component({
   selector: 'customer-database',
-  templateUrl: `
-  <customer-table></customer-table>
-  <info-table></info-table>
-  `
+  template: `
+            <customer-table (selectedSlug)="viewInfoHandler($event)"></customer-table>
+            <info-table [customerSlug]="selectedSlug"></info-table>
+            `
 })
 export class AppComponent {
-  title = 'customer-records';
+
+  selectedSlug: string = "";
+  
+  viewInfoHandler(slug: string) {
+    this.selectedSlug = slug;
+  }
 }
